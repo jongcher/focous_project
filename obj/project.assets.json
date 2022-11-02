@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\FUCOS.csproj",
+      "projectUniqueName": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\focous_project\\FUCOS.csproj",
       "projectName": "FUCOS",
-      "projectPath": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\FUCOS.csproj",
+      "projectPath": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\focous_project\\FUCOS.csproj",
       "packagesPath": "C:\\Users\\jc121\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\obj\\",
+      "outputPath": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\focous_project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jc121\\AppData\\Roaming\\NuGet\\NuGet.Config",

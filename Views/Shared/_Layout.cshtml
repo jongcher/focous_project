@@ -102,12 +102,12 @@
                         <span style="color : coral; font-size : 21px; font-weight : 600;"><i class="fa-solid fa-phone"></i> 010-0000-0000</span>
                     </div>
                     <div class="col-4 align-middle align-items-center d-flex justify-content-center" style=" width : 100px; height : 90%;">
-                        <span style="font-size : 30px; font-weight: 700; color:#f89d3e;">Fucous</span>
+                        <a asp-action="index" asp-controller="Home" class="Main_nav_a"><span style="font-size : 30px; font-weight: 700; color:#f89d3e;">Fucous</span></a>
                     </div>
                     <div class="col-4 justify-content-center d-flex">
                         <ul class="m-0 p-0 align-middle" style="list-style : none; float:left;">
-                            <li class="align-middle Mail_nav_li"><a href="#" class="Main_nav_a">로그인</a></li>
-                            <li class="align-middle Mail_nav_li"><a href="#" class="Main_nav_a">사업자 몰가입</a></li>
+                            <li class="align-middle Mail_nav_li"><a asp-controller="Login" asp-action="Login" class="Main_nav_a">로그인</a></li>
+                            <li class="align-middle Mail_nav_li"><a asp-controller="Register" asp-action="Register" class="Main_nav_a">사업자 몰가입</a></li>
                             <li class="align-middle Mail_nav_li"><a href="#" class="Main_nav_a">장바구니</a></li>
                         </ul>
                     </div>
