@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zQKP+5O/qZyyvBnM9LEcybhyTE2thcGYz3zxCYdhkNF9MUuURsleu4wYu9ni/U4znGmEftBohLY06SCQe4qMCQ==",
+  "dgSpecHash": "ZMeH18kU8L1onHAYvNvz0UgMUD+TItR/JaUgkk7uy1d+h/ZH/Mfq3ylmnF8OiqEwJeDvZbWler3cLr/QfRINvA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jc121\\Desktop\\FUCOS\\FUCOS\\focous_project\\FUCOS.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jc121\\.nuget\\packages\\mysqlconnector\\2.1.13\\mysqlconnector.2.1.13.nupkg.sha512"
+  ],
   "logs": []
 }
