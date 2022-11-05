@@ -79,8 +79,8 @@
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin :auto; margin-top : 20px;">
-                <button type="submit" class="btn btn-outline-secondary " style=" width : 95px;">회원가입</button>
-                <a asp-controller="Home" asp-action="index"><input type="button" class="register_button" value="취소" style="width:116px; height:34px; margin-right:10px;"></a>
+                <button type="submit" class="btn btn-outline-secondary d-inline " style=" width : 95px; margin-right :10px;">회원가입</button>
+                <a class="btn btn-outline-secondary d-inline align-middle" style="width : 95px;" asp-controller="Home" asp-action="index">취소</a>
             </div>
         </form>
     </div>
@@ -138,6 +138,6 @@
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 @section Scripts{
     @{
-        <partial name="_ValidationScriptsPartial" />
+    <partial name="_ValidationScriptsPartial" />
     }
     }

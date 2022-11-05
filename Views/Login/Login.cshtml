@@ -1,6 +1,6 @@
 ﻿@model FUCOS.Models.Login.RegisterManageModel
 
-<div class=" row col-12 p-0 m-0 d-flex justify-content-around h-75" style="">
+<div class=" row col-12 p-0 m-0 d-flex justify-content-around" style="height:62vw;">
     <div class="col-1 row m-0 p-0"></div>
     <div class=" row col-9 p-0 mb-0 d-flex justify-content-center" style="margin : 0; margin-top : 10px;">
         <form method="post" asp-controller="Login" asp-action="Login">
@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin :auto; margin-top : 20px;">
-                <button type="submit" class="btn btn-outline-secondary " style=" width : 95px;">로그인</button>
-                <a asp-controller="Login" asp-action="Register_index" style="text-decoration:none;">회원가입</a>
+                <button type="submit" class="btn btn-outline-secondary d-inline" style=" width : 95px; margin-right : 10px;">로그인</button>
+                <a class="btn btn-outline-secondary d-inline align-middle" asp-controller="Register" asp-action="Register" style="text-decoration:none; width : 95px;">회원가입</a>
             </div>
         </form>
     </div>
