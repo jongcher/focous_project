@@ -1,57 +1,86 @@
-﻿<div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
+﻿@model FUCOS.Models.Login.RegisterManageModel
+
+
+<div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
     <div class="col-1 row m-0 p-0"></div>
     <div class=" row col-9 p-0 mb-0 d-flex justify-content-center" style="margin : 0; margin-top : 10px;">
-        <form>
+        <form id="loginform" method="post" asp-controller="Register" asp-action="Register">
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0">
-                    <label for="exampleFormControlInput1" class="form-label form-control-sm">ID</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="">
+                    <label for="ID" class="form-label form-control-sm">ID</label>
+                    <input type="text" asp-for="Id" name="ID" class="form-control form-control-sm" id="ID" placeholder="5~25자의 숫자와 영어의 조합입니다." autocomplete="off">
+                    <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="Id"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput2" class="form-label form-control-sm">Password</label>
-                    <input type="password" class="form-control form-control-sm" id="exampleFormControlInput2" placeholder="">
+                    <label for="Password" class="form-label form-control-sm">Password</label>
+                    <input type="password" asp-for="Password" class="form-control form-control-sm" id="Password" placeholder="">
+                    <span style="color:#ffffff; font-size:12px; margin-left:15px;" asp-validation-for="Password"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput3" class="form-label">이름</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput3" placeholder="">
+                    <label for="Password_check" class="form-label form-control-sm">Password 확인</label>
+                    <input type="password" asp-for="Password_check" class="form-control form-control-sm" id="Password_check" placeholder="">
+                    <span style="color:#ffffff; font-size:12px; margin-left:15px;" asp-validation-for="Password_check"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput4" class="form-label">전화번호</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput4" placeholder="">
+                    <label for="Name" class="form-label">이름</label>
+                    <input type="text" asp-for="Name" class="form-control form-control-sm" id="Name" placeholder="">
+                    <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="Name"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput5" class="form-label">우편번호</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput5" placeholder="">
+                    <label for="Mail" class="form-label">E-Mail</label>
+                    <input type="text" asp-for="Mail" class="form-control form-control-sm" id="Mail" placeholder="">
+                    <span style="margin-left:95px; color:#ffffff; font-size:12px;" asp-validation-for="Mail"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput5" class="form-label">주소</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput5" placeholder="">
+                    <label for="Tel" class="form-label">전화번호</label>
+                    <input type="text" asp-for="Tel" class="form-control form-control-sm" id="tel" placeholder="숫자만입력해주세요">
+                    <span style="margin-left:95px; color:#ffffff; font-size:12px;" asp-validation-for="Tel"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput5" class="form-label">상세주소</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput5" placeholder="">
+                    <label for="Phone" class="form-label">휴대전화</label>
+                    <input type="text" asp-for="Phone" class="form-control form-control-sm" id="Phone" placeholder="숫자만입력해주세요">
+                    <span style="margin-left:95px; color:#ffffff; font-size:12px;" asp-validation-for="Phone"></span>
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
-                    <label for="exampleFormControlInput6" class="form-label">사업자번호</label>
-                    <input type="text" class="form-control form-control-sm" id="exampleFormControlInput6" placeholder="">
+                    <label for="add" class="form-label">우편번호</label>
+                    <input type="text" asp-for="add" class="form-control form-control-sm" id="add" placeholder="">
+                </div>
+            </div>
+            <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                <div class="col-6 row p-0 m-0 mb-0">
+                    <label for="add2" class="form-label">주소</label>
+                    <input type="text" asp-for="add2" class="form-control form-control-sm" id="add2" placeholder="">
+                </div>
+            </div>
+            <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                <div class="col-6 row p-0 m-0 mb-0">
+                    <label for="add3" class="form-label">상세주소</label>
+                    <input type="text" asp-for="add3" class="form-control form-control-sm" id="add3" placeholder="">
+                </div>
+            </div>
+            <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                <div class="col-6 row p-0 m-0 mb-0">
+                    <label for="Biz_No" class="form-label">사업자번호</label>
+                    <input type="text" class="form-control form-control-sm" id="Biz_No" placeholder="">
                 </div>
             </div>
             <div class="col-12 row p-0 justify-content-center" style="margin :auto; margin-top : 20px;">
                 <button type="submit" class="btn btn-outline-secondary " style=" width : 95px;">회원가입</button>
+                <a asp-controller="Home" asp-action="index"><input type="button" class="register_button" value="취소" style="width:116px; height:34px; margin-right:10px;"></a>
             </div>
         </form>
     </div>

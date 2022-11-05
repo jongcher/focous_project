@@ -52,3 +52,4 @@ C:\Users\jc121\Desktop\FUCOS\FUCOS\focous_project\obj\Debug\net6.0\FUCOS.genrunt
 C:\Users\jc121\Desktop\FUCOS\FUCOS\focous_project\obj\Debug\net6.0\ref\FUCOS.dll
 C:\Users\jc121\Desktop\FUCOS\FUCOS\focous_project\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\jc121\Desktop\FUCOS\FUCOS\focous_project\obj\Debug\net6.0\FUCOS.csproj.CopyComplete
+C:\Users\jc121\Desktop\FUCOS\FUCOS\focous_project\bin\Debug\net6.0\System.Security.Permissions.dll
