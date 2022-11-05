@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="../bootstrap-5.2.0-dist/css/bootstrap.min.css" />
 
+    <script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/1dbe4bfbd4.js" crossorigin="anonymous"></script>
     <script src="../bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="../wwwroot/js/site.js" asp-append-version="true"></script>
+
 
     <style>
         html, body {
@@ -165,6 +168,6 @@
     </footer>
     @await RenderSectionAsync("AboutSection", required: false)
     @RenderSection("Scripts", required: false)
-
+    
 </body>
 </html>
