@@ -2,6 +2,10 @@
 
 
 <div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
+    <div class="col-12 p-0 m-0 row ">
+        <h3 class="text-danger"> Validation Errors</h3>
+        <div asp-validation-summary="All"></div>
+    </div>
     <div class="col-1 row m-0 p-0"></div>
     <div class=" row col-9 p-0 mb-0 d-flex justify-content-center" style="margin : 0; margin-top : 10px;">
         <form id="loginform" method="post" asp-controller="Register" asp-action="Register">
@@ -15,7 +19,7 @@
             <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
                 <div class="col-6 row p-0 m-0 mb-0">
                     <label for="Password" class="form-label form-control-sm">Password</label>
-                    <input type="password" asp-for="Password" class="form-control form-control-sm" id="Password" placeholder="">
+                    <input type="password" asp-for="Password" class="form-control form-control-sm" id="Password" placeholder="비밀번호는 8~20자의 영어, 숫자, 특수문자의 조합입니다.">
                     <span style="color:#ffffff; font-size:12px; margin-left:15px;" asp-validation-for="Password"></span>
                 </div>
             </div>
@@ -131,13 +135,14 @@
                 document.getElementById("add3").focus();
             }
 
-        }).open(); 
+        }).open();
     }
 
 </script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 @section Scripts{
     @{
-    <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial" />
     }
     }

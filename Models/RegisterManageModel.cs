@@ -15,7 +15,7 @@ namespace FUCOS.Models.Login
         [StringLength(25, MinimumLength = 5,
             ErrorMessage = "아이디는 5자 이상 25자 이하로 입력하시오.")] // StringLenght : 문자의 갯수를 제한
         [RegularExpression(@"^(?=.*?[a-z])(?=.*?[0-9]).{5,}$", ErrorMessage = "* 아이디는 5~25자의 숫자와 영어의 조합입니다.")] // RegularExpression : 정규식을 사용하여 유효성을 검사
-        [Remote("RegisterChkId", "Login")] // Remote : 메서드를 사용하여 유효성을 검사 Remote("매서드","컨트롤러",ErrorMessage="")
+        [Remote("RegisterChkId", "Reigser")] // Remote : 메서드를 사용하여 유효성을 검사 Remote("매서드","컨트롤러",ErrorMessage="")
         public string? Id { get; set; }    // Register.cshtml 의 input 변수와 일치해야 한다.
 
         [Required(ErrorMessage = "이름을 입력하세요.")]
