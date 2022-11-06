@@ -1,2 +1,83 @@
-﻿<div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
+﻿<style>
+    .Group_ul {
+        display: none;
+    }
+</style>
+
+<div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
+    <div class="col-9 row p-0 m-0">
+        <div class="col-3 row p-0 m-0" style="border-right : 1px solid black">
+            <ul>
+                <li id="group1">
+                    <span id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
+                    <ul class="Group_ul" id="group1_ul">
+                        <li id="group1_1">
+                            <span onclick="if(group1_1_ul.style.display == 'none'){group1_1_ul.style.display = 'block'} else {group1_1_ul.style.display = 'none'}">중분류1-1</span>
+                            <ul class="Group_ul" id="group1_1_ul">
+                                <li id="group1_1_1">
+                                    소분류1-1-1
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="group1_2">
+                            <span onclick="if(group1_2_ul.style.display == 'none'){group1_2_ul.style.display = 'block'} else {group1_2_ul.style.display = 'none'}">중분류1-2</span>
+                            <ul class="Group_ul" id="group1_2_ul">
+                                <li id="group1_2_1">
+                                    소분류1-2-1
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="group1_3">
+                            <span onclick="if(group1_3_ul.style.display == 'none'){group1_3_ul.style.display = 'block'} else {group1_3_ul.style.display = 'none'}">중분류1-3</span>
+                            <ul class="Group_ul" id="group1_3_ul">
+                                <li id="group1_3_1">
+                                    소분류1-3-1
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="group2">
+                    <span onclick="if(group2_ul.style.display == 'none'){group2_ul.style.display = 'block'} else {group2_ul.style.display = 'none'}">대분류 2 </span>
+                    <ul class="Group_ul" id="group2_ul">
+                        <li id="group2_1">
+                            <span onclick="if(group2_1_ul.style.display == 'none'){group2_1_ul.style.display = 'block'} else {group2_1_ul.style.display = 'none'}">중분류2-1 </span>
+                            <ul class="Group_ul" id="group2_1_ul">
+                                <li id="group2_1_1">
+                                    소분류2-1-1
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9 row p-0 d-flex justify-content-around" style="margin : 0; margin-top:10px;">
+            <div class="col-12 row p-0 m-0 ">
+                <div class="row col-6 p-0 m-0 d-flex justify-content-around">
+                    <div class="card" style="width: 19rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-6 p-0 m-0 d-flex justify-content-around">
+                    <div class="card" style="width: 19rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+</div>
+
+
