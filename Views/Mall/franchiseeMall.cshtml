@@ -1,50 +1,90 @@
 ﻿<style>
     .Group_ul {
         display: none;
+        list-style: none;
     }
+
+    .Group_M_ul {
+        list-style: none;
+    }
+
+    .Group_li {
+        list-style: none;
+    }
+
+    .LVL1 {
+    }
+
+    .LVL2 {
+    }
+
+    .LVL3 {
+    }
+
+    .Group_M_span {
+        font-weight: 700;
+        font-size: 21px;
+        margin-left: 17px;
+        border-bottom: 1px solid black;
+    }
+
+    .Group_D_span {
+        font-weight: 800;
+        font-size: 18px;
+        margin-left: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    .Group_R_span {
+        font-weight: 500;
+        font-size: 17px;
+        margin-left: 5px;
+        border-bottom: 1px solid black;
+    }
+
 </style>
 
 <div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
     <div class="col-9 row p-0 m-0">
-        <div class="col-3 row p-0 m-0" style="border-right : 1px solid black">
-            <ul>
-                <li id="group1">
-                    <span id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
+        <div class="col-3 row p-0 m-0" style="border-right : 1px solid #D5D5D5">
+            <ul class=" Group_M_ul" style="margin-top : 20px;">
+                <li id="group1" class="Group_li LVL1">
+                    <span class="Group_M_span" id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
                     <ul class="Group_ul" id="group1_ul">
-                        <li id="group1_1">
-                            <span onclick="if(group1_1_ul.style.display == 'none'){group1_1_ul.style.display = 'block'} else {group1_1_ul.style.display = 'none'}">중분류1-1</span>
+                        <li id="group1_1" class="Group_li LVL2">
+                            <span class="Group_D_span" onclick="if(group1_1_ul.style.display == 'none'){group1_1_ul.style.display = 'block'} else {group1_1_ul.style.display = 'none'}">중분류1-1</span>
                             <ul class="Group_ul" id="group1_1_ul">
-                                <li id="group1_1_1">
-                                    소분류1-1-1
+                                <li id="group1_1_1" class="Group_li LVL3">
+                                    <span class="Group_R_span">소분류1-1-1</span>
                                 </li>
                             </ul>
                         </li>
-                        <li id="group1_2">
-                            <span onclick="if(group1_2_ul.style.display == 'none'){group1_2_ul.style.display = 'block'} else {group1_2_ul.style.display = 'none'}">중분류1-2</span>
+                        <li id="group1_2" class="Group_li LVL2">
+                            <span class="Group_D_span" onclick="if(group1_2_ul.style.display == 'none'){group1_2_ul.style.display = 'block'} else {group1_2_ul.style.display = 'none'}">중분류1-2</span>
                             <ul class="Group_ul" id="group1_2_ul">
-                                <li id="group1_2_1">
-                                    소분류1-2-1
+                                <li id="group1_2_1" class="Group_li LVL3">
+                                    <span class="Group_R_span">소분류1-2-1</span>
                                 </li>
                             </ul>
                         </li>
-                        <li id="group1_3">
-                            <span onclick="if(group1_3_ul.style.display == 'none'){group1_3_ul.style.display = 'block'} else {group1_3_ul.style.display = 'none'}">중분류1-3</span>
+                        <li id="group1_3" class="Group_li LVL2">
+                            <span class="Group_D_span" onclick="if(group1_3_ul.style.display == 'none'){group1_3_ul.style.display = 'block'} else {group1_3_ul.style.display = 'none'}">중분류1-3</span>
                             <ul class="Group_ul" id="group1_3_ul">
-                                <li id="group1_3_1">
-                                    소분류1-3-1
+                                <li id="group1_3_1" class="Group_li LVL3">
+                                    <span class="Group_R_span">소분류1-3-1</span>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li id="group2">
-                    <span onclick="if(group2_ul.style.display == 'none'){group2_ul.style.display = 'block'} else {group2_ul.style.display = 'none'}">대분류 2 </span>
+                <li id="group2" class="Group_li LVL1">
+                    <span class="Group_M_span" onclick="if(group2_ul.style.display == 'none'){group2_ul.style.display = 'block'} else {group2_ul.style.display = 'none'}">대분류 2 </span>
                     <ul class="Group_ul" id="group2_ul">
-                        <li id="group2_1">
-                            <span onclick="if(group2_1_ul.style.display == 'none'){group2_1_ul.style.display = 'block'} else {group2_1_ul.style.display = 'none'}">중분류2-1 </span>
+                        <li id="group2_1" class="Group_li LVL2">
+                            <span class="Group_D_span" onclick="if(group2_1_ul.style.display == 'none'){group2_1_ul.style.display = 'block'} else {group2_1_ul.style.display = 'none'}">중분류2-1 </span>
                             <ul class="Group_ul" id="group2_1_ul">
-                                <li id="group2_1_1">
-                                    소분류2-1-1
+                                <li id="group2_1_1" class="Group_li LVL3">
+                                    <span class="Group_R_span">소분류2-1-1</span>
                                 </li>
                             </ul>
                         </li>
@@ -52,29 +92,46 @@
                 </li>
             </ul>
         </div>
-        <div class="col-9 row p-0 d-flex justify-content-around" style="margin : 0; margin-top:10px;">
-            <div class="col-12 row p-0 m-0 ">
-                <div class="row col-6 p-0 m-0 d-flex justify-content-around">
-                    <div class="card" style="width: 19rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-9 row p-0 d-flex justify-content-around" style="margin : 0; margin-top:24px;">
+            <div class="col-12 row p-0 m-0" style="border-bottom : 1px solid #D5D5D5;">
+                <form class="col-12 row p-0 m-0 d-flex justify-content-around">
+                    <div class="col-2 row p-0 m-0">
+                    </div>
+                    <div class="col-6 row p-0 m-0">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
                         </div>
                     </div>
-                </div>
-                <div class="row col-6 p-0 m-0 d-flex justify-content-around">
-                    <div class="card" style="width: 19rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
+                </form>
+            </div>
+            <div class="col-12 row p-0 " style="margin : 0; margin-top : 10px;">
+                @{
+                    int num = 0;
+                }
+                @for (int a = 0; a < Convert.ToInt32(ViewBag.container_count); a++)
+                {
+                    <div class="col-12 row p-0 " style="margin : 0; margin-top : 10px;">
+                        @for (int b = 0; b < 2; b++)
+                        {
+                            if(num == Convert.ToInt32(ViewBag.item_count)){
+                                break;
+                            }
+                            <div class="row col-6 p-0 m-0 d-flex justify-content-around">
+                                <div class="card" style="width: 19rem;">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@ViewBag.list_ITEM_PRICE[num]원</h5>
+                                        <p class="card-text">@ViewBag.list_ITEM_SIZE[num] @ViewBag.list_UNIT_ITEM[num]</p>
+                                        <span></span>
+                                        <a href="#" class="btn btn-primary">자세히 보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            num++;
+                        }
                     </div>
-                </div>
-
+                }
             </div>
         </div>
     </div>
