@@ -19,7 +19,7 @@ namespace FUCOS.Controllers
             //// 접속권한 설정
             string ITEM_NM = input.ITEM_NM;
             ////리스트 몇개 뽑을건지 확인하기
-            if (input.ITEM_NM == "1")
+            if (input.ITEM_NM == "All_ITEM" || input.ITEM_NM == null)
             {
                 input.ITEM_NM = "";
             }

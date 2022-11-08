@@ -1,4 +1,6 @@
-﻿<style>
+﻿@model FUCOS.Models.Login.MallManageModel
+
+<style>
     .Group_ul {
         display: none;
         list-style: none;
@@ -46,39 +48,22 @@
 
 <div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
     <div class="col-9 row p-0 m-0">
-        <div class="col-12 row p-0 m-0"><span>대분류1</span>
-            <div>
-            <div>
-                <div>
-                <span>중분류1-1</span>
-                    </div>
-                <div>
-                    <span>소분류1-1-1</span>
-                </div>
-            </div>
-            <div>
-                <span>중분류1-2</span>
-                <div>
-                    <span>소분류1-2-1</span>
-                </div>
-            </div>
-            <div>
-                <span>중분류1-3</span>
-                <div>
-                    <span>소분류1-3-1</span>
-                </div>
-            </div>
-        </div>
-        <div><span>대분류2</span>
-            <div><span>중분류2-1</span>
-                <div><span>소분류2-1-1</span></div>
-            </div>
-        </div>
-        </div>
-    </div>
-    <div class="col-9 row p-0 m-0">
         <div class="col-3 row p-0 m-0" style="border-right : 1px solid #D5D5D5">
-            <ul class=" Group_M_ul" style="margin-top : 20px;">
+            <div class="col-12 row m-0 p-0">
+                <span id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
+                <div id="group1_ul" style="display:none">
+                    <div >
+                        <span id="num1" onclick="if(num1_1.style.display == 'none'){num1_1.style.display = 'block'} else {num1_1.style.display = 'none'}">중분류1</span>
+                    </div>
+                    <div id="num1_1" style="display:none">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                    <div >중분류2</div>
+                </div>
+            </div>
+ @*           <ul class=" Group_M_ul" style="margin-top : 20px;">
                 <li id="group1" class="Group_li LVL1">
                     <span class="Group_M_span" id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
                     <ul class="Group_ul" id="group1_ul">
@@ -121,7 +106,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>*@
         </div>
         <div class="col-9 row p-0 d-flex justify-content-around" style="margin : 0; margin-top:24px;">
             <div class="col-12 row p-0 m-0" style="border-bottom : 1px solid #D5D5D5;">
@@ -130,8 +115,8 @@
                     </div>
                     <div class="col-6 row p-0 m-0">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                            <input id="ITEM_NM" name="ITEM_NM" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
                         </div>
                     </div>
                 </form>
