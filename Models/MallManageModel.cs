@@ -9,6 +9,6 @@ namespace FUCOS.Models.Login
 {
     public class MallManageModel
     {
-
+        public string ITEM_NM { get; set; }
     }
 }

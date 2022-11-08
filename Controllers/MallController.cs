@@ -2,6 +2,7 @@
 using Common;
 using static Common.Class1;
 using MySqlConnector;
+using FUCOS.Models.Login;
 
 namespace FUCOS.Controllers
 {
@@ -11,15 +12,23 @@ namespace FUCOS.Controllers
         {
             return View();
         }
-        public IActionResult franchiseeMall()
+
+        //[Route("Mall/franchiseeMall/?{ITEM_NM}")]
+        public IActionResult franchiseeMall(MallManageModel input)
         {
             //// 접속권한 설정
-
+            string ITEM_NM = input.ITEM_NM;
             ////리스트 몇개 뽑을건지 확인하기
+            if (input.ITEM_NM == "1")
+            {
+                input.ITEM_NM = "";
+            }
 
             var cmdQry = new MySqlCommand();
             CommonBase comm = new CommonBase();
             MySqlConnection conn = comm.rtnConn();
+
+            cmdQry.Parameters.AddWithValue("P_ITEM_NM", input.ITEM_NM);
 
             var rstQry = comm.SelQry(conn, cmdQry, "ITEM_R_000");
 
@@ -154,5 +163,11 @@ namespace FUCOS.Controllers
         {
             return View();
         }
+
+        public IActionResult MallDetails()
+        {
+            return View();
+        }
+
     }
 }

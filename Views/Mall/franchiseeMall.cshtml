@@ -94,7 +94,7 @@
         </div>
         <div class="col-9 row p-0 d-flex justify-content-around" style="margin : 0; margin-top:24px;">
             <div class="col-12 row p-0 m-0" style="border-bottom : 1px solid #D5D5D5;">
-                <form asp-controller="" class="col-12 row p-0 m-0 d-flex justify-content-around">
+                <form asp-controller="Mall" asp-action="franchiseeMall" method="post" class="col-12 row p-0 m-0 d-flex justify-content-around">
                     <div class="col-2 row p-0 m-0">
                     </div>
                     <div class="col-6 row p-0 m-0">
@@ -124,7 +124,7 @@
                                         <h5 class="card-title">@ViewBag.list_ITEM_PRICE[num]원</h5>
                                         <p class="card-text">@ViewBag.list_ITEM_SIZE[num] @ViewBag.list_UNIT_ITEM[num]</p>
                                         <span></span>
-                                        <a href="#" class="btn btn-primary">자세히 보기</a>
+                                        <a asp-controller="Mall" asp-action="MallDetails" class="btn btn-primary" target="_blank">자세히 보기</a>
                                     </div>
                                 </div>
                             </div>
