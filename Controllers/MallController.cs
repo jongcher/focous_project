@@ -164,8 +164,32 @@ namespace FUCOS.Controllers
             return View();
         }
 
-        public IActionResult MallDetails()
+        public IActionResult MallDetails(MallManageModel input)
         {
+            ////리스트 몇개 뽑을건지 확인하기
+            if (input.ITEM_CD == "All_ITEM" || input.ITEM_CD == null)
+            {
+                input.ITEM_CD = "";
+            }
+
+            var cmdQry = new MySqlCommand();
+            CommonBase comm = new CommonBase();
+            MySqlConnection conn = comm.rtnConn();
+
+            cmdQry.Parameters.AddWithValue("P_ITEM_CD", input.ITEM_CD);
+
+            var rstQry = comm.SelQry(conn, cmdQry, "ITEM_R_001");
+
+            if(rstQry.Rows.Count == 0)
+            {
+                return Redirect("/Mall/franchiseeMall");
+            }
+
+            ViewBag.ITEM_NM = rstQry.Rows[0].ItemArray[0];
+            ViewBag.UNIT_ITEM = rstQry.Rows[0].ItemArray[1];
+            ViewBag.ITEM_SIZE = rstQry.Rows[0].ItemArray[2];
+            ViewBag.ITEM_PRICE = Convert.ToInt32(rstQry.Rows[0].ItemArray[3]);
+
             return View();
         }
 
