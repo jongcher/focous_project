@@ -163,10 +163,16 @@ namespace FUCOS.Controllers
 
             string user_group = HttpContext.Session.GetString("SessionKeyUserGrop");
 
-            if(user_group != "Franchisee" || user_group != "admin") 
+            if(user_group == null) 
             {
                 ModelState.AddModelError("경고", "사업자 및 가맹점만 열람 가능합니다.");
                 return Redirect("/"); 
+            }
+
+            if (user_group == "Customer_USER")
+            {
+                ModelState.AddModelError("경고", "사업자 및 가맹점만 열람 가능합니다.");
+                return Redirect("/");
             }
 
             string ITEM_NM = input.ITEM_NM;

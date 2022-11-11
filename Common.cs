@@ -139,7 +139,7 @@ namespace Common
 
             public MySqlConnection rtnConn()
             {
-                _conn = new("Server=175.197.124.128;Port=3306;Database=company;Uid=root;Pwd=root;AllowZeroDateTime=True;");
+                _conn = new("Server=175.197.124.158;Port=3306;Database=company;Uid=root;Pwd=root;AllowZeroDateTime=True;");
 
                 return _conn;
             }
