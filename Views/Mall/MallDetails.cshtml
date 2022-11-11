@@ -12,10 +12,11 @@
                     <div class="col-12 row p-0 m-0"><span>속성</span></div>
                     <div class="col-12 row p-0 m-0">
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected>선택옵션</option>
+                            @for (int a = 0; a < ViewBag.op_li_CD.Count; a ++)
+                            {
+                                <option value="@ViewBag.op_li_CD[a]">@ViewBag.op_li_NM[a]</option>
+                            }
                         </select>
                     </div>
                 </div>
