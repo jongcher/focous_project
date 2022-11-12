@@ -1,0 +1,59 @@
+﻿<div>
+    <style>
+        .orderfinish {
+            width: 80%;
+            margin: auto;
+            padding: 30px;
+        }
+
+            .orderfinish ul {
+                text-align: center;
+                background-color: whitesmoke;
+                padding: 30px;
+                margin-bottom: 50px;
+                border: whitesmoke solid 1px;
+                border-radius: 10px;
+                font-size: 24px;
+                font-weight: 400;
+                list-style: none;
+            }
+
+                .orderfinish ul :first-child {
+                    text-decoration: none;
+                    color: orange;
+                }
+
+        .submitmainbtns {
+            width: 420px;
+            height: 200px;
+            padding-top: 20px;
+            display: block;
+            margin: auto;
+        }
+
+        .submitbtn {
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+            .submitbtn.center {
+                margin: auto;
+                background-color: orange;
+                color: white;
+                border: none;
+                display: block;
+            }
+    </style>
+    <section class="orderfinish">
+        <div class="orderfinish__information">
+            <ul>
+                <li>주문완료</li>
+            </ul>
+        </div>
+        <div class="submitmainbtns">
+            <button id="OK" onclick="window.close();" class="submitbtn center">확인</button>
+        </div>
+    </section>
+</div>

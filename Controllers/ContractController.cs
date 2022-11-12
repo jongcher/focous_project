@@ -5,7 +5,7 @@ namespace FUCOS.Controllers
 {
     public class ContractController : Controller
     {
-        public void Register_Contract(ContractManageModel input)
+        public IActionResult Register_Contract(ContractManageModel input)
         {
             string CO_CD = "";
             string CO_CD_LAST = input.CHECK_CO_CD();
@@ -40,6 +40,7 @@ namespace FUCOS.Controllers
             }
 
             input.Register_Contract(CO_CD);
+            return Redirect("/Mall/BuyComplyte");
         }
 
     }

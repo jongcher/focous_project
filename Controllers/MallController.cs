@@ -709,6 +709,9 @@ namespace FUCOS.Controllers
 
             return View();
         }
-
+        public IActionResult BuyComplyte()
+        {
+            return View();
+        }
     }
 }

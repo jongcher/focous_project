@@ -58,7 +58,7 @@
         <div class="col-11 row p-0 m-0 d-flex justify-content-between">
             <a type="button" asp-controller="Cart" asp-action="Cart_Insert" asp-route-ITEM_CD="@ViewBag.ITEM_CD" class="btn btn-outline-secondary" style="height : 36px; margin-bottom : 10px; width:24%;"><i class="fa-solid fa-cart-shopping"></i></a>
                 <input type="submit" class="btn btn-secondary col-9" style="height : 36px; margin-bottom : 10px;" value="주문하기" />
-            <button type="button" class="btn btn-outline-secondary" style="height : 36px;">취소</button>
+            <button type="button" onclick="window.close();" class="btn btn-outline-secondary" style="height : 36px;">취소</button>
         </div>
             <input type="hidden" asp-for="ITEM_PRICE" value="@ViewBag.ITEM_PRICE" />
             <input type="hidden" asp-for="ITEM_CD" value="@ViewBag.ITEM_CD" />
