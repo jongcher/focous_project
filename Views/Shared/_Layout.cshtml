@@ -116,13 +116,14 @@
                             {
                                 <li class="align-middle Mail_nav_li"><a asp-controller="" asp-action="" class="Main_nav_a">@User.Identity.Name</a></li>
                                 <li class="align-middle Mail_nav_li"><a asp-controller="Login" asp-action="Logout" class="Main_nav_a">로그아웃</a></li>
+                                <li class="align-middle Mail_nav_li"><a asp-controller="Cart" asp-action="Cart" class="Main_nav_a">장바구니</a></li>
                             }
                             else
                             {
                                 <li class="align-middle Mail_nav_li"><a asp-controller="Login" asp-action="Login" class="Main_nav_a">로그인</a></li>
                                 <li class="align-middle Mail_nav_li"><a asp-controller="Register" asp-action="Register" class="Main_nav_a">사업자 몰가입</a></li>
                             }
-                            <li class="align-middle Mail_nav_li"><a href="#" class="Main_nav_a">장바구니</a></li>
+                            
                         </ul>
                     </div>
                 </div>

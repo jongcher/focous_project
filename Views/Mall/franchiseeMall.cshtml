@@ -139,7 +139,8 @@
                                 <div class="card" style="width: 19rem;">
                                     <img src="..." class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">@ViewBag.list_ITEM_PRICE[num]원</h5>
+                                        <h5 class="card-title">@ViewBag.list_ITEM_NM[num]</h5>
+                                        <p class="card-text">@ViewBag.list_ITEM_PRICE[num]원</p>
                                         <p class="card-text">@ViewBag.list_ITEM_SIZE[num] @ViewBag.list_UNIT_ITEM[num]</p>
                                         <span></span>
                                         <a asp-controller="Mall" asp-action="MallDetails" asp-route-ITEM_CD="@ViewBag.list_item_cd[num]" class="btn btn-primary" target="_blank">자세히 보기</a>

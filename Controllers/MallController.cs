@@ -3,6 +3,7 @@ using Common;
 using static Common.Class1;
 using MySqlConnector;
 using FUCOS.Models.Login;
+using System.Security.Claims;
 
 namespace FUCOS.Controllers
 {
@@ -653,12 +654,58 @@ namespace FUCOS.Controllers
                 }
             }
 
+            cmdQry = new MySqlCommand();
+            comm = new CommonBase();
+            conn = comm.rtnConn();
+
+            cmdQry.Parameters.AddWithValue("P_ITEM_CD", input.ITEM_CD);
+
+            var rstQry3 = comm.SelQry(conn, cmdQry, "ITEM_OPTION_R_001");
+
+            if (rstQry.Rows.Count == 0)
+            {
+                return Redirect("/Mall/franchiseeMall");
+            }
+
+            List<string> op_li_NM2 = new List<string>();
+            List<string> op_li_CD2 = new List<string>();
+            if (rstQry3.Rows.Count != 0)
+            {
+                for (int a = 0; a < rstQry3.Rows.Count; a++)
+                {
+                    string op_NM;
+                    string op_CD;
+                    if (rstQry3.Rows[a].ItemArray[1] == null)
+                    {
+                        op_NM = "";
+                    }
+                    else
+                    {
+                        op_NM = rstQry3.Rows[a].ItemArray[1].ToString();
+                    }
+
+                    if (rstQry3.Rows[a].ItemArray[0] == null)
+                    {
+                        op_CD = "";
+                    }
+                    else
+                    {
+                        op_CD = rstQry3.Rows[a].ItemArray[0].ToString();
+                    }
+                    op_li_NM2.Add(op_NM);
+                    op_li_CD2.Add(op_CD);
+                }
+            }
+            ViewBag.USER_ID = HttpContext.Session.GetString("SessionKeyId");
+            ViewBag.ITEM_CD = input.ITEM_CD;
             ViewBag.ITEM_NM = rstQry.Rows[0].ItemArray[0];
             ViewBag.UNIT_ITEM = rstQry.Rows[0].ItemArray[1];
             ViewBag.ITEM_SIZE = rstQry.Rows[0].ItemArray[2];
             ViewBag.ITEM_PRICE = Convert.ToInt32(rstQry.Rows[0].ItemArray[3]);
             ViewBag.op_li_NM = op_li_NM;
             ViewBag.op_li_CD = op_li_CD;
+            ViewBag.op_li_NM2 = op_li_NM2;
+            ViewBag.op_li_CD2 = op_li_CD2;
 
             return View();
         }

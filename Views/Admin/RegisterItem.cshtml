@@ -1,0 +1,95 @@
+﻿@model FUCOS.Models.Login.AdminManageModel
+<div class="col-12 row p-0 m-0 d-flex justify-content-center">
+    <div class="col-10 row p-0 m-0">
+        <div class="col-12 row p-0 m-0">품목등록</div>
+        <div class="col-12 row p-0 m-0">
+            <form asp-controller="Admin" asp-action="RegisterItem" method="get">
+                @*ITEM_CD*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_CD" class="form-label form-control-sm">품목코드</label>
+                        <input type="text" asp-for="ITEM_CD" name="ITEM_CD" class="form-control form-control-sm" id="ITEM_CD" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_CD"></span>
+                    </div>
+                </div>
+                @*ITEM_NM*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_NM" class="form-label form-control-sm">품목명</label>
+                        <input type="text" asp-for="ITEM_NM" name="ITEM_NM" class="form-control form-control-sm" id="ITEM_NM" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_NM"></span>
+                    </div>
+                </div>
+                @*UNIT_ITEM*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="UNIT_ITEM" class="form-label form-control-sm">품목단위</label>
+                        <input type="text" asp-for="UNIT_ITEM" name="UNIT_ITEM" class="form-control form-control-sm" id="UNIT_ITEM" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="UNIT_ITEM"></span>
+                    </div>
+                </div>
+                @*ITEM_SIZE*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_SIZE" class="form-label form-control-sm">품목크기</label>
+                        <input type="text" asp-for="ITEM_SIZE" name="ITEM_SIZE" class="form-control form-control-sm" id="ITEM_SIZE" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_SIZE"></span>
+                    </div>
+                </div>
+                @*ITEM_LVL1*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ID" class="form-label form-control-sm">품목분류1</label>
+                        <input type="text" asp-for="ITEM_LVL1" name="ITEM_LVL1" class="form-control form-control-sm" id="ITEM_LVL1" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_LVL1"></span>
+                    </div>
+                </div>
+                @*ITEM_LVL2*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_LVL2" class="form-label form-control-sm">품목분류2</label>
+                        <input type="text" asp-for="ITEM_LVL2" name="ITEM_LVL2" class="form-control form-control-sm" id="ITEM_LVL2" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_LVL2"></span>
+                    </div>
+                </div>
+                @*ITEM_LVL3*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_LVL3" class="form-label form-control-sm">품목분류3</label>
+                        <input type="text" asp-for="ITEM_LVL3" name="ITEM_LVL3" class="form-control form-control-sm" id="ITEM_LVL3" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_LVL3"></span>
+                    </div>
+                </div>
+                @*STOCK_UNIT*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="STOCK_UNIT" class="form-label form-control-sm">저장단위</label>
+                        <input type="text" asp-for="STOCK_UNIT" name="STOCK_UNIT" class="form-control form-control-sm" id="STOCK_UNIT" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="STOCK_UNIT"></span>
+                    </div>
+                </div>
+                @*SALE_UNIT*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="SALE_UNIT" class="form-label form-control-sm">판매단위</label>
+                        <input type="text" asp-for="SALE_UNIT" name="SALE_UNIT" class="form-control form-control-sm" id="SALE_UNIT" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="SALE_UNIT"></span>
+                    </div>
+                </div>
+                @*ITEM_PRICE*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_PRICE" class="form-label form-control-sm">가격</label>
+                        <input type="text" asp-for="ITEM_PRICE" name="ITEM_PRICE" class="form-control form-control-sm" id="ITEM_PRICE" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_PRICE"></span>
+                    </div>
+                </div>
+                <div class="col-12 row m-0 p-0 d-flex justify-content-center">
+                    <input class="col-3 btn btn-outline-secondary" style="margin:0; margin-right : 10px;" type="submit" value="품목등록" />
+                    <a class="col-3 btn btn-outline-secondary" asp-controller="Admin" asp-action="Admin">취소</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

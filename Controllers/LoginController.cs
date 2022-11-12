@@ -62,7 +62,6 @@ namespace FUCOS.Controllers
                         identity.AddClaim(new Claim("Id", user_id.ToString()));
                         identity.AddClaim(new Claim(ClaimTypes.Name, user_Name.ToString()));
 
-
                         var principal = new ClaimsPrincipal(identity);
 
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties   // 쿠키설정

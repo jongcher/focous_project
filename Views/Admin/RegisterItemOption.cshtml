@@ -1,0 +1,61 @@
+﻿@model FUCOS.Models.Login.AdminManageModel
+<div class="col-12 row p-0 m-0 d-flex justify-content-center">
+    <div class="col-10 row p-0 m-0">
+        <div class="col-12 row p-0 m-0">품목등록</div>
+        <div class="col-12 row p-0 m-0">
+            <form asp-controller="Admin" asp-action="RegisterItemOption" method="get">
+                @*ITEM_CD*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="ITEM_CD" class="form-label form-control-sm">품목코드</label>
+                        <input type="text" asp-for="ITEM_CD" name="ITEM_CD" class="form-control form-control-sm" id="ITEM_CD" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="ITEM_CD"></span>
+                    </div>
+                </div>
+                @*OPTION_TYPE*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <div class="col-12 row p-0 m-0"><span>옵션분류</span></div>
+                        <div class="col-12 row p-0 " style="margin :0; margin-bottom : 10px;">
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" asp-for="OPTION_TYPE" name="OPTION_TYPE">
+                                <option selected>옵션분류</option>
+                                <option value="1">기본</option>
+                                <option value="2">상세</option>
+                            </select>
+                        </div>
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="OPTION_TYPE"></span>
+                    </div>
+                </div>
+                @*SEQ*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="SEQ" class="form-label form-control-sm">순서</label>
+                        <input type="text" asp-for="SEQ" name="SEQ" class="form-control form-control-sm" id="SEQ" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="SEQ"></span>
+                    </div>
+                </div>
+                @*OPTION_CD*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="OPTION_CD" class="form-label form-control-sm">옵션코드</label>
+                        <input type="text" asp-for="OPTION_CD" name="OPTION_CD" class="form-control form-control-sm" id="OPTION_CD" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="OPTION_CD"></span>
+                    </div>
+                </div>
+                @*OPTION_NM*@
+                <div class="col-12 row p-0 justify-content-center" style="margin : 0; margin-top : 10px;">
+                    <div class="col-6 row p-0 m-0">
+                        <label for="OPTION_NM" class="form-label form-control-sm">옵션명</label>
+                        <input type="text" asp-for="OPTION_NM" name="OPTION_NM" class="form-control form-control-sm" id="OPTION_NM" autocomplete="off">
+                        <span style="margin-left:15px; color:#ffffff; font-size:12px;" asp-validation-for="OPTION_NM"></span>
+                    </div>
+                </div>
+                <div class="col-12 row m-0 p-0 d-flex justify-content-center">
+                    <input class="col-3 btn btn-outline-secondary" style="margin:0; margin-right : 10px;" type="submit" value="옵션등록" />
+                    <a class="col-3 btn btn-outline-secondary" asp-controller="Admin" asp-action="Admin">취소</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
