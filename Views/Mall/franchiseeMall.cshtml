@@ -43,71 +43,53 @@
         margin-left: 5px;
         border-bottom: 1px solid black;
     }
+    .middel :hover {
+        background-color: #D5D5D5;
+    }
+
+    .farst{
+        border-bottom: 2px solid #D5D5D5;
+    }
+    .farst:hover{
+         border-bottom: 1px solid#D5D5D5;
+    }
+    .small{
+        padding : 0;
+        padding-left : 40px;
+        border-bottom: 1px solid#D5D5D5;
+    }
+
+    .small:hover {
+            background-color: #D5D5D5;
+    }
+    .item_lvl3{
+        text-decoration : none;
+        color: black;
+        margin : 3px 0px;
+    }
 
 </style>
 <script type="text/javascript">
 </script>
 <div class=" row col-12 p-0 m-0 d-flex justify-content-around mh-100" style="">
     <div class="col-9 row p-0 m-0">
-        <div class="col-3 row p-0 m-0" style="border-right : 1px solid #D5D5D5">
-            <div class="col-12 row m-0 p-0">
+        <div class="col-3 row p-0 m-0" style="">
+            <div class="d-block col-12 row m-0 p-0" style="border-right : 1px solid #D5D5D5; ">
+                <div class="fatst p-0 m-0" style="border-bottom : 2px solid #D5D5D5;">
                 <span id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
+                </div>
                 <div id="group1_ul" style="display:none">
-                    <div>
+                    <div class="middel " style="width:100%; margin : 0px; padding : 0; padding-left : 15px; border-bottom : 1px solid #D5D5D5;">
                         <span id="num1" onclick="if(num1_1.style.display == 'none'){num1_1.style.display = 'block'} else {num1_1.style.display = 'none'}">중분류1</span>
                     </div>
                     <div id="num1_1" style="display:none">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
+                        <div class="small"><a class="item_lvl3" asp-controller="Mall" asp-action="franchiseeMall" asp-route-ITEM_LVL1="1" asp-route-ITEM_LVL2="1" asp-route-ITEM_LVL3="1">소분류 1</a></div>
+                        <div class="small"><a class="item_lvl3" asp-controller="Mall" asp-action="franchiseeMall" asp-route-ITEM_LVL1="1" asp-route-ITEM_LVL2="1" asp-route-ITEM_LVL3="2">소분류 2</a></div>
+                        <div class="small"><a class="item_lvl3" asp-controller="Mall" asp-action="franchiseeMall" asp-route-ITEM_LVL1="1" asp-route-ITEM_LVL2="1" asp-route-ITEM_LVL3="3">소분류 3</a></div>
                     </div>
-                    <div>중분류2</div>
+                    <div class="middel">중분류2</div>
                 </div>
             </div>
-            @*           <ul class=" Group_M_ul" style="margin-top : 20px;">
-            <li id="group1" class="Group_li LVL1">
-            <span class="Group_M_span" id="group1_span" onclick="if(group1_ul.style.display == 'none'){group1_ul.style.display = 'block'} else {group1_ul.style.display = 'none'}">대분류1</span>
-            <ul class="Group_ul" id="group1_ul">
-            <li id="group1_1" class="Group_li LVL2">
-            <span class="Group_D_span" onclick="if(group1_1_ul.style.display == 'none'){group1_1_ul.style.display = 'block'} else {group1_1_ul.style.display = 'none'}">중분류1-1</span>
-            <ul class="Group_ul" id="group1_1_ul">
-            <li id="group1_1_1" class="Group_li LVL3">
-            <span class="Group_R_span">소분류1-1-1</span>
-            </li>
-            </ul>
-            </li>
-            <li id="group1_2" class="Group_li LVL2">
-            <span class="Group_D_span" onclick="if(group1_2_ul.style.display == 'none'){group1_2_ul.style.display = 'block'} else {group1_2_ul.style.display = 'none'}">중분류1-2</span>
-            <ul class="Group_ul" id="group1_2_ul">
-            <li id="group1_2_1" class="Group_li LVL3">
-            <span class="Group_R_span">소분류1-2-1</span>
-            </li>
-            </ul>
-            </li>
-            <li id="group1_3" class="Group_li LVL2">
-            <span class="Group_D_span" onclick="if(group1_3_ul.style.display == 'none'){group1_3_ul.style.display = 'block'} else {group1_3_ul.style.display = 'none'}">중분류1-3</span>
-            <ul class="Group_ul" id="group1_3_ul">
-            <li id="group1_3_1" class="Group_li LVL3">
-            <span class="Group_R_span">소분류1-3-1</span>
-            </li>
-            </ul>
-            </li>
-            </ul>
-            </li>
-            <li id="group2" class="Group_li LVL1">
-            <span class="Group_M_span" onclick="if(group2_ul.style.display == 'none'){group2_ul.style.display = 'block'} else {group2_ul.style.display = 'none'}">대분류 2 </span>
-            <ul class="Group_ul" id="group2_ul">
-            <li id="group2_1" class="Group_li LVL2">
-            <span class="Group_D_span" onclick="if(group2_1_ul.style.display == 'none'){group2_1_ul.style.display = 'block'} else {group2_1_ul.style.display = 'none'}">중분류2-1 </span>
-            <ul class="Group_ul" id="group2_1_ul">
-            <li id="group2_1_1" class="Group_li LVL3">
-            <span class="Group_R_span">소분류2-1-1</span>
-            </li>
-            </ul>
-            </li>
-            </ul>
-            </li>
-            </ul>*@
         </div>
         <div class="col-9 row p-0 d-flex justify-content-around" style="margin : 0; margin-top:24px;">
             <div class="col-12 row p-0 m-0" style="border-bottom : 1px solid #D5D5D5;">
@@ -116,8 +98,8 @@
                     </div>
                     <div class="col-6 row p-0 m-0">
                         <div class="input-group mb-3">
-                            <input id="ITEM_NM" name="ITEM_NM" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+                            <input id="ITEM_NM" name="ITEM_NM" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">검색</button>
                         </div>
                     </div>
                 </form>

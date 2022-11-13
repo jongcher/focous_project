@@ -35,7 +35,11 @@
         }
 
 </style>
-
+@if(ViewBag.USER_GROUP == "admin"){
+    <div class="col-12 row m-0 p-0 d-flex justify-content-center">
+        <div class="col-12 row m-0 p-0 d-flex justify-content-center"><a style="width:auto; text-decoration:none; color: black;" asp-controller="admin" asp-action="admin">관리자 페이지</a> </div>
+    </div>
+}
 <div class="col-12 row m-0 p-0  d-flex align-items-center justify-content-center" style="height:750px; position:relative; z-index : 1; background-image:url(https://cdn.imweb.me/thumbnail/20220228/87ebbcb2d5754.jpg); background-size: cover; background-repeat: no-repeat;">
     <div class="col-9 row m-0 p-0 d-flex justify-content-center ">
         <div class="col-12 row m-0 p-0 d-flex justify-content-center"><span style="width : auto; background-color : white; color : black; font-size : 21px;">대구 3대 맛집 비법 그대로 담은</span></div>

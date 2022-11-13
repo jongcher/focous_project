@@ -12,5 +12,11 @@ namespace FUCOS.Models.Login
         public string ITEM_NM { get; set; }
 
         public string ITEM_CD { get; set; }
+
+        public string ITEM_LVL1 { get; set; }
+
+        public string ITEM_LVL2 { get; set; }
+
+        public string ITEM_LVL3 { get; set; }
     }
 }

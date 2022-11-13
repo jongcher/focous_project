@@ -15,6 +15,9 @@ namespace FUCOS.Controllers
 
         public IActionResult Index()
         {
+            string User_group = HttpContext.Session.GetString("SessionKeyUserGrop");
+
+            ViewBag.USER_GROUP = User_group;
             return View();
         }
 

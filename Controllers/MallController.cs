@@ -26,11 +26,31 @@ namespace FUCOS.Controllers
                 input.ITEM_NM = "";
             }
 
+            string LVL1 = input.ITEM_LVL1;
+            string LVL2 = input.ITEM_LVL2;
+            string LVL3 = input.ITEM_LVL3;
+
+            if (LVL1 == null)
+            {
+                LVL1 = "";
+            }
+            if (LVL2 == null)
+            {
+                LVL2 = "";
+            }
+            if (LVL3 == null)
+            {
+                LVL3 = "";
+            }
             var cmdQry = new MySqlCommand();
             CommonBase comm = new CommonBase();
             MySqlConnection conn = comm.rtnConn();
 
+
             cmdQry.Parameters.AddWithValue("P_ITEM_NM", input.ITEM_NM);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL1", LVL1);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL2", LVL2);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL3", LVL3);
 
             var rstQry = comm.SelQry(conn, cmdQry, "ITEM_R_000");
 
@@ -154,6 +174,7 @@ namespace FUCOS.Controllers
 
             ViewBag.item_count = item_count;
             ViewBag.container_count = container_count;
+
             return View();
         }
 
@@ -183,11 +204,31 @@ namespace FUCOS.Controllers
                 input.ITEM_NM = "";
             }
 
+            string LVL1 = input.ITEM_LVL1;
+            string LVL2 = input.ITEM_LVL2;
+            string LVL3 = input.ITEM_LVL3;
+
+            if(LVL1 == null)
+            {
+                LVL1 = "";
+            }
+            if(LVL2 == null)
+            {
+                LVL2 = "";
+            }
+            if(LVL3 == null)
+            {
+                LVL3 = "";
+            }
             var cmdQry = new MySqlCommand();
             CommonBase comm = new CommonBase();
             MySqlConnection conn = comm.rtnConn();
 
+
             cmdQry.Parameters.AddWithValue("P_ITEM_NM", input.ITEM_NM);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL1", LVL1);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL2", LVL2);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL3", LVL3);
 
             var rstQry = comm.SelQry(conn, cmdQry, "ITEM_R_000");
 
@@ -323,11 +364,31 @@ namespace FUCOS.Controllers
                 input.ITEM_NM = "";
             }
 
+            string LVL1 = input.ITEM_LVL1;
+            string LVL2 = input.ITEM_LVL2;
+            string LVL3 = input.ITEM_LVL3;
+
+            if (LVL1 == null)
+            {
+                LVL1 = "";
+            }
+            if (LVL2 == null)
+            {
+                LVL2 = "";
+            }
+            if (LVL3 == null)
+            {
+                LVL3 = "";
+            }
             var cmdQry = new MySqlCommand();
             CommonBase comm = new CommonBase();
             MySqlConnection conn = comm.rtnConn();
 
+
             cmdQry.Parameters.AddWithValue("P_ITEM_NM", input.ITEM_NM);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL1", LVL1);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL2", LVL2);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL3", LVL3);
 
             var rstQry = comm.SelQry(conn, cmdQry, "ITEM_R_000");
 
@@ -451,6 +512,7 @@ namespace FUCOS.Controllers
 
             ViewBag.item_count = item_count;
             ViewBag.container_count = container_count;
+
             return View();
         }
         public IActionResult RegisterMall(MallManageModel input)
@@ -462,11 +524,31 @@ namespace FUCOS.Controllers
                 input.ITEM_NM = "";
             }
 
+            string LVL1 = input.ITEM_LVL1;
+            string LVL2 = input.ITEM_LVL2;
+            string LVL3 = input.ITEM_LVL3;
+
+            if (LVL1 == null)
+            {
+                LVL1 = "";
+            }
+            if (LVL2 == null)
+            {
+                LVL2 = "";
+            }
+            if (LVL3 == null)
+            {
+                LVL3 = "";
+            }
             var cmdQry = new MySqlCommand();
             CommonBase comm = new CommonBase();
             MySqlConnection conn = comm.rtnConn();
 
+
             cmdQry.Parameters.AddWithValue("P_ITEM_NM", input.ITEM_NM);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL1", LVL1);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL2", LVL2);
+            cmdQry.Parameters.AddWithValue("P_ITEM_LVL3", LVL3);
 
             var rstQry = comm.SelQry(conn, cmdQry, "ITEM_R_000");
 
@@ -590,6 +672,7 @@ namespace FUCOS.Controllers
 
             ViewBag.item_count = item_count;
             ViewBag.container_count = container_count;
+
             return View();
         }
 

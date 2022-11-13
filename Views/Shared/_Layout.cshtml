@@ -114,7 +114,7 @@
                         <ul class="m-0 p-0 align-middle" style="list-style : none; float:left;">
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <li class="align-middle Mail_nav_li"><a asp-controller="" asp-action="" class="Main_nav_a">@User.Identity.Name</a></li>
+                                <li class="align-middle Mail_nav_li"><a asp-controller="Contract" asp-action="Contract" class="Main_nav_a">@User.Identity.Name</a></li>
                                 <li class="align-middle Mail_nav_li"><a asp-controller="Login" asp-action="Logout" class="Main_nav_a">로그아웃</a></li>
                                 <li class="align-middle Mail_nav_li"><a asp-controller="Cart" asp-action="Cart" class="Main_nav_a">장바구니</a></li>
                             }
