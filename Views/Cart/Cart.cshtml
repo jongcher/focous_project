@@ -1,8 +1,6 @@
-﻿<div>
+﻿@model FUCOS.Models.Login.CartManageModel
+<div>
     <style>
-        {
-            margin: 0;
-        }
 
         * {
             box-sizing: border-box;
@@ -65,15 +63,15 @@
             border-bottom: 1px solid lightgrey;
         }
 
-        .cart__list__detail :nth-child(3) {
+        .cart__list__detail :nth-child(2) {
             vertical-align: top;
         }
 
-            .cart__list__detail :nth-child(3) a {
+            .cart__list__detail :nth-child(2) a {
                 font-size: 12px;
             }
 
-            .cart__list__detail :nth-child(3) p {
+            .cart__list__detail :nth-child(2) p {
                 margin-top: 6px;
                 font-weight: bold;
             }
@@ -110,18 +108,20 @@
             padding: 7px;
         }
 
+        .cart__list__detail :nth-child(3),
         .cart__list__detail :nth-child(4),
         .cart__list__detail :nth-child(5),
         .cart__list__detail :nth-child(6) {
             border-left: 2px solid whitesmoke;
         }
 
+        .cart__list__detail :nth-child(4),
         .cart__list__detail :nth-child(5),
         .cart__list__detail :nth-child(6) {
             text-align: center;
         }
 
-            .cart__list__detail :nth-child(5) a {
+            .cart__list__detail :nth-child(4) a {
                 background-color: #f89d3e;
                 color: white;
                 border: none;
@@ -165,14 +165,14 @@
 
     <section class="cart">
         <table class="cart__list">
-            <form>
+            <form asp-controller="Cart" asp-action="Delete_Cart">
             <thead>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td colspan="2">상품정보</td>
                     <td>옵션</td>
                     <td>상품금액</td>
                     <td>배송비</td>
+                    <td></td>
                 </tr>
             </thead>
             <tbody>
@@ -180,8 +180,8 @@
                         for (int a = 0; a < ViewBag.Count; a++)
                         {
                         <tr class="cart__list__detail">
-                            <td><input type="checkbox"></td>
-                            <td><img src="image/keyboard.jpg" alt="magic keyboard"></td>
+
+                            <td><img src="image/keyboard.jpg" alt="@ViewBag.LI_ITEM_NM[a]"></td>
                             <td>
                                 <a href="#">@ViewBag.LI_ITEM_NM[a]</a>
                                 <br>
@@ -193,23 +193,17 @@
                             </td>
                             <td>
                                 <span class="price" style="display: block; margin-bottom: 10px;">116,620원</span>
-                                <a asp-controller="Mall" asp-action="Malldetails" asp-route-ITEM_CD="@ViewBag.LI_ITEM_CD[a]" class="cart__list__orderbtn">주문하기</a>
+                                <a target="_blank" asp-controller="Mall" asp-action="Malldetails" asp-route-ITEM_CD="@ViewBag.LI_ITEM_CD[a]" class="cart__list__orderbtn">주문하기</a>
                             </td>
                             <td>무료</td>
+                            <td><a asp-action="Delete_Cart" asp-controller="Cart" asp-route-ITEM_CD="@ViewBag.LI_ITEM_CD[a]" class="btn btn-outline-danger btn-sm">삭제</a></td>
                         </tr>
+                        <input type="hidden" asp-for="ITEM_CD" value="@ViewBag.LI_ITEM_CD[a]" />
                         }
                     }
 
             </tbody>
             <tfoot>
-                <tr>
-                    <td colspan="3">
-                        <button class="cart__list__optionbtn">선택상품 삭제</button>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tfoot>
             </form>
         </table>

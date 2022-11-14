@@ -62,5 +62,29 @@ namespace FUCOS.Controllers
 
             return Redirect("/Mall/MallDetails?ITEM_CD=" + input.ITEM_CD);
         }
+
+
+        public IActionResult Delete_Cart(CartManageModel input) 
+        {
+            string User_ID = HttpContext.Session.GetString("SessionKeyId");
+            if (User_ID != null)
+            {
+                if(input.ITEM_CD != "")
+                {
+                    var cmdQry = new MySqlCommand();
+                    CommonBase comm = new CommonBase();
+                    MySqlConnection conn = comm.rtnConn();
+
+                    cmdQry.Parameters.AddWithValue("P_USER_ID", User_ID);
+                    cmdQry.Parameters.AddWithValue("P_ITEM_CD", input.ITEM_CD);
+
+                    comm.ExeQry(conn, cmdQry, "CART_D_000");
+
+                    
+                } 
+            }
+
+            return Redirect("/Cart/Cart");
+        }
     }
 }

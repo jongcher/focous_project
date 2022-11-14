@@ -13,7 +13,7 @@ namespace FUCOS.Models.Login
     {
         public string ITEM_CD { get; set; }
 
-
+        public bool check { get; set; }
 
 
         public void Insert_Cart(string User_ID)
