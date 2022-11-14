@@ -121,7 +121,7 @@
             text-align: center;
         }
 
-            .cart__list__detail :nth-child(5) button {
+            .cart__list__detail :nth-child(5) a {
                 background-color: #f89d3e;
                 color: white;
                 border: none;
@@ -190,11 +190,10 @@
                             <td class="cart__list__option">
                                 <p>상품단위 : @ViewBag.LI_UNIT_ITEM[a]</p>
                                 <p>상품단위 : @ViewBag.LI_SALE_UNIT[a]</p>
-                                <button class="cart__list__optionbtn">주문조건 추가/변경</button>
                             </td>
                             <td>
-                                <span class="price">116,620원</span><br>
-                                <button class="cart__list__orderbtn">주문하기</button>
+                                <span class="price" style="display: block; margin-bottom: 10px;">116,620원</span>
+                                <a asp-controller="Mall" asp-action="Malldetails" asp-route-ITEM_CD="@ViewBag.LI_ITEM_CD[a]" class="cart__list__orderbtn">주문하기</a>
                             </td>
                             <td>무료</td>
                         </tr>
@@ -205,8 +204,7 @@
             <tfoot>
                 <tr>
                     <td colspan="3">
-                        <input type="checkbox"> <button class="cart__list__optionbtn">선택상품 삭제</button>
-                        <button class="cart__list__optionbtn">선택상품 찜</button>
+                        <button class="cart__list__optionbtn">선택상품 삭제</button>
                     </td>
                     <td></td>
                     <td></td>
